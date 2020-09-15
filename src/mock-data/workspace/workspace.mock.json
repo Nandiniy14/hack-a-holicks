@@ -1,0 +1,62 @@
+[
+    {
+        "location": "USA",
+        "buildingName": "305-Huntsville",
+        "uid": "b001",
+        "floors": [
+            {
+                "floorName": "floor 1",
+                "uid": "b001f001"
+            },
+            {
+                "floorName": "floor 2",
+                "uid": "b001f002"
+            },
+            {
+                "floorName": "floor 3",
+                "uid": "b001f003"
+            }
+        ]        
+    },
+    {
+        "location": "India",
+        "buildingName": "Divyasree-Hyderabad",
+        "uid": "b002",
+        "floors": [
+            {
+                "floorName": "floor 9",
+                "uid": "b002f009"
+            },
+            {
+                "floorName": "floor 10",
+                "uid": "b002f010"
+            },
+            {
+                "floorName": "floor 11",
+                "uid": "b002f011"
+            }
+        ]             
+    },
+    {
+        "location": "USA",
+        "buildingName": "US-Detroit",
+        "uid": "b003",
+        "floors": [
+            {
+                "floorName": "floor 1",
+                "uid": "b003f001"
+            }
+        ]        
+    },
+    {
+        "location": "Australia",
+        "buildingName": "AUS-Brisbane",
+        "uid": "b004",
+        "floors": [
+            {
+                "floorName": "floor 3",
+                "uid": "b004f003"
+            }
+        ]        
+    }
+]
