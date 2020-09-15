@@ -1,0 +1,56 @@
+.overview-background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #e0e0e0;
+
+  .main-head {
+    .react-image {
+      height: 6rem;
+      width: 7rem;
+      position: relative;
+      padding: 2rem;
+    }
+  }
+
+  .sub-head {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+
+  .container {
+    display: flex;
+
+    &__left {
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        margin-top: 0;
+      }
+    }
+
+    &__right {
+      h3 {
+        margin-top: 4rem;
+      }
+
+      .phd-button {
+        margin: 3rem auto;
+      }
+    }
+  }
+}
+
+.phd-button {
+  display: block;
+  position: relative;
+  height: 5rem;
+  width: 15rem;
+  border-radius: 1rem;
+  outline: none;
+  cursor: pointer;
+  background-color: #2f2d2d;
+}

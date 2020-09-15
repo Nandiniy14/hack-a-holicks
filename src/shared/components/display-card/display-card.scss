@@ -1,0 +1,24 @@
+.display-card {
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #c4c4c4;
+  background-color: #575757;
+  border-radius: 1rem;
+  box-sizing: border-box;
+
+  &__title {
+    text-align: center;
+    font-size: 1.5rem;
+    border-bottom: 1px solid red;
+    height: 3rem;
+    line-height: 3rem;
+  }
+
+  &__value {
+    text-align: center;
+    font-size: 4rem;
+  }
+}
