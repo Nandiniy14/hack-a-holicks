@@ -35,11 +35,9 @@ export const OverviewBackGround: React.FunctionComponent<IOverviewBackgroundProp
                 <img className="react-image" src={reactlogo} />
                 Welcome to React Starter Kit
                 </div>
-            <div className="sub-head"> Helps you to kick start your React App development with Redux and Redux-Saga </div>
+            <div className="sub-head"> </div>
             <div className="container">
                 <div className="container__right">
-                    <h2>Also, helps you to focus on what you are building for PPM Hack Day</h2>
-                    <h3>Know more about PPM Hack Day</h3>
                     <NavButton buttonText={getButtonText('1')} onClick={phdOneClick} className={"phd-button phd-one"} />
                     <NavButton buttonText={getButtonText('2')} onClick={phdTwoClick} className={"phd-button phd-two"} />
                 </div>
