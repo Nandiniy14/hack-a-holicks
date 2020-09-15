@@ -1,0 +1,1 @@
+export const getLogOutOnTokenExpiry = (state: object): boolean => false;
