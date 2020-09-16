@@ -6,22 +6,26 @@ import { Dropdown, Form } from "semantic-ui-react";
 import DateRangePicker from "react-bootstrap-daterangepicker";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-daterangepicker/daterangepicker.css";
-import { get } from "lodash";
+import { get, isEmpty } from "lodash";
 import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
 import hexdesklogo from '../../../../static/images/hexdesk.png';
 import { Button } from "react-bootstrap";
+import moment from "moment";
 
 export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
   {}
-> {
+  > {
   public state = {
     buildingsList: [],
     floorsList: [],
     location: "",
-    selectedBuilding: string,
-    selectedFloor: string
+    selectedBuilding: '',
+    selectedFloor: '',
+    startDate: moment(),
+    endDate: moment(),
+    selectedSeatID: ''
   };
 
   public componentDidMount() {
@@ -49,7 +53,6 @@ export class userMainPage extends React.PureComponent<
               search
               selection
               options={this.props.locationsData}
-              clearable
               defaultValue={false}
               noResultsMessage={null}
               onChange={this.handleChange}
@@ -62,7 +65,6 @@ export class userMainPage extends React.PureComponent<
               selection
               multiple={false}
               options={this.state.buildingsList}
-              clearable
               defaultValue={false}
               noResultsMessage={null}
               onChange={this.handleBuildingsListChange}
@@ -75,7 +77,6 @@ export class userMainPage extends React.PureComponent<
               selection
               multiple={false}
               options={this.state.floorsList}
-              clearable
               defaultValue={false}
               noResultsMessage={null}
               onChange={this.handleFloorChange}
@@ -85,20 +86,23 @@ export class userMainPage extends React.PureComponent<
                 startDate: "01/01/2020",
                 endDate: "01/15/2020",
               }}
+              onApply={this.onDateSelection}
             >
               <input type="text" className="form-control col-4 user-page__date-picker" />
             </DateRangePicker>
-            <Form.Button className="find-button">Find</Form.Button>
+            <Form.Button className="find-button" onClick={this.getTheLayoutdata}>Find</Form.Button>
           </Form.Group>
         </Form>
         <div className='layout'>
-          <SeatLayout />
+          <SeatLayout deskGroups={[[]]} onSeatSelection={this.onSeatSelection} selectedSeatID={this.state.selectedSeatID} />
         </div>
-        <div className='button_style'>
-        <Button style={{float:"right",backgroundColor:"#3c8195"}}>Book Now</Button>
-        </div>
+        <Form.Button className="submit-button" type='submit' style={{float:"right",backgroundColor:"#3c8195"}} onClick={this.onBookingClick} disabled={isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
       </div>
     );
+  }
+
+  private onSeatSelection = (selectedSeatID: string) => {
+    this.setState(() => { return { selectedSeatID } });
   }
 
   private handleChange = (e: any, { value }: any) => {
@@ -124,13 +128,13 @@ export class userMainPage extends React.PureComponent<
     const buildingsList = this.state.buildingsList.find(
       (data: any) => data.name === value
     );
-      get(buildingsList,'floors', []).forEach((item: any) => {
-        item.text = item.name;
-        item.value = item.name;
-      });
-      this.setState({
-        floorsList: get(buildingsList,'floors', []),
-      });
+    get(buildingsList, 'floors', []).forEach((item: any) => {
+      item.text = item.name;
+      item.value = item.name;
+    });
+    this.setState({
+      floorsList: get(buildingsList, 'floors', []),
+    });
   };
 
   private handleFloorChange = (e: any, { value }: any) => {
@@ -139,14 +143,31 @@ export class userMainPage extends React.PureComponent<
     })
   }
 
-    /**
-     * Function to fetch the layout Data
-     */
-    private getTheLayoutdata = () => {
-        this.props.fetchLayoutData({
-          location: this.state.location,
-          building: this.state.selectedBuilding,
-          floor: this.state.selectedFloor
-        });
-    };
+  /**
+   * Function to fetch the layout Data
+   */
+  private getTheLayoutdata = () => {
+    this.props.fetchLayoutData({
+      location: this.state.location,
+      building: this.state.selectedBuilding,
+      floor: this.state.selectedFloor,
+      startDate: this.state.startDate,
+      endDate: this.state.endDate
+    });
+  };
+
+  private onDateSelection = (event: any, picker: any) => {
+    this.setState({
+      startDate: picker.startDate,
+      endDate: picker.endDate
+    })
+  }
+
+  private onBookingClick = () => {
+    if (this.state.selectedSeatID) {
+      this.props.bookTheSeat(this.state.selectedSeatID, this.state.startDate.toString(), this.state.endDate.toString());
+    } else {
+      alert('Please select a seat');
+    }
+  }
 }

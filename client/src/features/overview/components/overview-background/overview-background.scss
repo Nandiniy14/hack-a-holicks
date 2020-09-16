@@ -34,7 +34,7 @@
 
   .container {
     display: flex;
-
+    max-width: 1720px;
     &__left {
       h1 {
         margin-bottom: 1rem;
@@ -65,5 +65,5 @@
   border-radius: 1rem;
   outline: none;
   cursor: pointer;
-  background-color: #2f2d2d;
+  background-color: #3c8195;
 }

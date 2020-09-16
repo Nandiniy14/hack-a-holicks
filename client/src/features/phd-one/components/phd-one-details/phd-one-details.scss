@@ -1,12 +1,18 @@
 .phd-one-details {
-  position: relative;
+  margin: 1.5rem;
   .layout {
     display: flex;
-    margin: 2rem;
-    height: calc(100vh - 22rem);
+    flex-direction: column;
+    margin: 2rem 0;
+    height: calc(100vh - 18rem);
     padding: 1rem;
     border: 2px solid grey;
     overflow: auto;
+
+    .desk-group {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 .main-head1{
@@ -52,4 +58,8 @@
 
 .find-button {
   width: 5% !important;
+}
+
+.submit-button{
+  
 }

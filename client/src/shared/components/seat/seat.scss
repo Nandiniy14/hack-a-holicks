@@ -1,19 +1,57 @@
 $color-primary: #026be3;
 $color-seat-number: black;
 $color-seat-reserved: #49963c;
-$color-secondary: #fafafa;
-$color-tertiary: #92d771;
+$color-enabled: #fafafa;
+$color-selected: #92d771;
 
 .seat {
-    background-color: $color-primary;
     width: 50px;
+    height: 25px;
     color: $color-seat-number;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid grey;
 
-    &__number {
-        font-size: 10px;
+    &__status-indicator {
+        border-radius: 100px;
+        bottom: 30px;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        z-index: 100;
+        border: 1px solid grey;
+        box-shadow: inset 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14),
+            0px 5px 22px 4px rgba(0, 0, 0, 0.12);
+
+        &--north {
+            top: 35px;
+        }
+
+        &--south {
+            bottom: 35px;
+        }
+
+        &--enabled {
+            cursor: pointer;
+            &:hover {
+                background-color: $color-enabled;
+            }
+        }
+
+        &--disabled {
+            cursor: not-allowed;
+        }
+
+        &--selected {
+            cursor: pointer;
+            background-color: $color-selected;
+        }
+
+        &--reserved {
+            cursor: not-allowed;
+            background-color: $color-seat-reserved;
+        }
     }
 
     &--north {
@@ -34,22 +72,5 @@ $color-tertiary: #92d771;
     &--west {
         border-top-right-radius: 8px;
         border-bottom-right-radius: 8px;
-    }
-
-    &--enabled {
-        cursor: pointer;
-        &:hover {
-            background-color: $color-secondary;
-        }
-    }
-
-    &--selected {
-        cursor: pointer;
-        background-color: $color-tertiary;
-    }
-
-    &--reserved {
-        cursor: not-allowed;
-        background-color: $color-seat-reserved;
     }
 }

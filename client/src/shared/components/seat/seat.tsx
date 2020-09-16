@@ -22,13 +22,31 @@ export class Seat extends React.PureComponent<ISeatProps, {}> {
         } = this.props;
         const className =
             "seat" +
-            (isSelected ? " seat--selected" : "") +
-            (!isSelected && isEnabled && !isReserved ? " seat--enabled" : "") +
-            (isReserved ? " seat--reserved" : "") +
             ` seat--${!orientation ? "north" : orientation}`;
+
+        let statusIndicatorClassName = 'seat__status-indicator';
+
+        if (orientation) {
+            statusIndicatorClassName += ` seat__status-indicator--${orientation}`;
+        } else {
+            statusIndicatorClassName += ` seat__status-indicator--north`;
+        }
+
+        if (isSelected) {
+            statusIndicatorClassName += ` seat__status-indicator--selected`;
+        } else if (isReserved) {
+            statusIndicatorClassName += ` seat__status-indicator--reserved`;
+        } else {
+            if (isEnabled) {
+                statusIndicatorClassName += ' seat__status-indicator--enabled';
+            } else {
+                statusIndicatorClassName += ' seat__status-indicator--disabled';
+            }
+        }
+
         return (
             <div data-tip={tooltip} className={className} onClick={this.handleClick} title={tooltip} style={style}>
-                <span className="seat__number">{this.props.seatNumber}</span>
+                <div className={statusIndicatorClassName} />
             </div>
         );
     }
