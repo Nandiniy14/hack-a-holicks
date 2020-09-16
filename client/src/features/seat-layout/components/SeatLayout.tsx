@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Desk } from '../../../shared/components/desk/desk';
-import { Seat } from '../../../shared/components/seat/seat';
 import { ISeatDetails } from './types/ISeatDetails';
 
 export class SeatLayout extends React.PureComponent<ISeatLayoutProps> {

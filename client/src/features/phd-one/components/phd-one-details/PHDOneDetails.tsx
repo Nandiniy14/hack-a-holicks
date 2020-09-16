@@ -9,6 +9,7 @@ import "bootstrap-daterangepicker/daterangepicker.css";
 import { get, isEmpty } from "lodash";
 import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
+import moment from "moment";
 
 export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
@@ -20,6 +21,8 @@ export class userMainPage extends React.PureComponent<
     location: "",
     selectedBuilding: '',
     selectedFloor: '',
+    startDate: moment(),
+    endDate: moment(),
     selectedSeatID: ''
   };
 
@@ -80,10 +83,11 @@ export class userMainPage extends React.PureComponent<
                 startDate: "01/01/2020",
                 endDate: "01/15/2020",
               }}
+              onApply={this.onDateSelection}
             >
               <input type="text" className="form-control col-4 user-page__date-picker" />
             </DateRangePicker>
-            <Form.Button className="find-button">Find</Form.Button>
+            <Form.Button className="find-button" onClick={this.getTheLayoutdata}>Find</Form.Button>
           </Form.Group>
         </Form>
         <div className='layout'>
@@ -136,22 +140,31 @@ export class userMainPage extends React.PureComponent<
     })
   }
 
-  /**
-   * Function to fetch the layout Data
-   */
-  private getTheLayoutdata = () => {
-    this.props.fetchLayoutData({
-      location: this.state.location,
-      building: this.state.selectedBuilding,
-      floor: this.state.selectedFloor
-    });
-  };
+    /**
+     * Function to fetch the layout Data
+     */
+    private getTheLayoutdata = () => {
+        this.props.fetchLayoutData({
+          location: this.state.location,
+          building: this.state.selectedBuilding,
+          floor: this.state.selectedFloor,
+          startDate: this.state.startDate,
+          endDate: this.state.endDate
+        });
+    };
 
-  private onBookingClick = () => {
-    if (this.state.selectedSeatID) {
-      this.props.bookTheSeat(this.state.selectedSeatID, "01/01/2020", "01/02/2020")
-    } else {
-      alert('Please select a seat');
+    private onDateSelection = (event: any, picker: any) => {
+      this.setState({
+        startDate: picker.startDate,
+        endDate: picker.endDate
+      })
     }
-  }
+
+    private onBookingClick = () => {
+        if (this.state.selectedSeatID) {
+            this.props.bookTheSeat(this.state.selectedSeatID, "01/01/2020", "01/02/2020")
+        } else {
+            alert('Please select a seat');
+        }
+    }
 }
