@@ -44,18 +44,12 @@ export class SeatLayout extends React.PureComponent {
     ]
     render() {
         return (
-            <div>
+            <>
                 <Desk seats={this.seats} onSeatSelect={() => { return }} selectedSeatID={'1'} />
-                {/* <Seat
-                    isEnabled={true}
-                    isReserved={false}
-                    seatNumber={1}
-                    orientation='east'
-                    selectSeat={() => { return }}
-                    tooltip='11A0236'
-                    isSelected={true}
-                /> */}
-            </div>
+                <Desk seats={this.seats} onSeatSelect={() => { return }} selectedSeatID={'1'} />
+                <Desk seats={this.seats} onSeatSelect={() => { return }} selectedSeatID={'1'} />
+                <Desk seats={this.seats} onSeatSelect={() => { return }} selectedSeatID={'1'} />
+            </>
         )
     }
 }
