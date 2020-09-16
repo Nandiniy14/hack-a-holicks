@@ -6,7 +6,7 @@ export const PHDTwoLogo: React.FunctionComponent<IPHDTwoLogoProps> = (props:IPHD
     return (
         <div>
             <div className={`phd-logo__title phd-two ${props.size === 'large'?'large':''}`}>
-                <span className="title-text"> Admin </span>
+                <span className="title-text"> <b className={"phd-two__text"}> Admin </b> </span>
             </div>
         </div>
     )

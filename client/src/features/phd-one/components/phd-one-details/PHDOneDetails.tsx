@@ -46,7 +46,6 @@ export class userMainPage extends React.PureComponent<
               search
               selection
               options={this.props.locationsData}
-              clearable
               defaultValue={false}
               noResultsMessage={null}
               onChange={this.handleChange}
@@ -59,7 +58,6 @@ export class userMainPage extends React.PureComponent<
               selection
               multiple={false}
               options={this.state.buildingsList}
-              clearable
               defaultValue={false}
               noResultsMessage={null}
               onChange={this.handleBuildingsListChange}
@@ -72,7 +70,6 @@ export class userMainPage extends React.PureComponent<
               selection
               multiple={false}
               options={this.state.floorsList}
-              clearable
               defaultValue={false}
               noResultsMessage={null}
               onChange={this.handleFloorChange}

@@ -17,9 +17,9 @@ const validateFormFields = (): boolean => {
 
     return (
         <div className="Login">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} style={{width: "50%", margin: "auto"}}>
                 <FormGroup controlId="username">
-                    <FormLabel>Emp ID</FormLabel>
+                    <FormLabel style={{float: "left"}}>Emp ID</FormLabel>
                     <FormControl
                         autoFocus
                         type="text"
@@ -28,7 +28,7 @@ const validateFormFields = (): boolean => {
                     />
                 </FormGroup>
                 <FormGroup controlId="password">
-                    <FormLabel>Company</FormLabel>
+                    <FormLabel style={{float: "left"}}>Company</FormLabel>
                     <FormControl
                         value={password}
                         onChange={e => setPassword(e.target.value)}

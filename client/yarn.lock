@@ -9276,6 +9276,11 @@ react-redux@^7.1.0:
     prop-types "^15.7.2"
     react-is "^16.8.6"
 
+react-render-helpers@^1.2.0:
+  version "1.2.0"
+  resolved "https://pkgs.dev.azure.com/hexagonPPMInnerSource/_packaging/PPM/npm/registry/react-render-helpers/-/react-render-helpers-1.2.0.tgz#62c178daedf768c3439af4a001ba57724c67a5d2"
+  integrity sha1-YsF42u33aMNDmvSgAbpXckxnpdI=
+
 react-router-dom@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-5.0.1.tgz#ee66f4a5d18b6089c361958e443489d6bab714be"
