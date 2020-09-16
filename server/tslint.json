@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-config-airbnb",
+    "tslint-config-prettier",
+    "tslint-plugin-blank-line"
+  ],
+  "defaultSeverity": "error",
+  "linterOptions": {
+    "exclude": [
+      "config/**/*.js",
+      "node_modules/**/*.ts",
+      "storybook-static/**",
+      "src/**/*.json",
+      "src/**/*.story.tsx",
+      "src/**/*.stories.tsx"
+    ]
+  },
+  "rules": {
+    "import-name": false,
+    "no-console": false,
+    "variable-name": [true, "allow-pascal-case"],
+    "prefer-array-literal": [
+      true,
+      {
+        "allow-type-parameters": true
+      }
+    ],
+    "no-switch-case-fall-through": true,
+    "blank-line": true,
+    "completed-docs": [true, "classes", "enums", "functions", "methods"]
+  }
+}
