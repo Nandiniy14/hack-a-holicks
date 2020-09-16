@@ -9,6 +9,7 @@ import { IDictionary } from '../types/IDictionary';
 import { IPageRoute } from '../types/IPageRoute';
 import * as constants from './constants';
 import { NotFoundPage } from './NotFound';
+import { UserLoginDetailsContainer } from '../features/user-login/components/user-login-details/UserLoginDetailsContainer';
 
 const routes = constants.ROUTES;
 
@@ -34,6 +35,7 @@ function getComponentForPath(path: string) {
         '/home': OverviewBackGroundContainer,
         '/phd/v1': PHDOneDetailsContainer,
         '/phd/v2': PHDTwoDetails,
+        '/user/login': UserLoginDetailsContainer,
         '/': SeatLayout
     };
 

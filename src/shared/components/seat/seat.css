@@ -1,0 +1,31 @@
+.seat {
+  background-color: #026be3;
+  width: 50px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .seat__number {
+    font-size: 10px; }
+  .seat--north {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px; }
+  .seat--south {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px; }
+  .seat--east {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px; }
+  .seat--west {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px; }
+  .seat--enabled {
+    cursor: pointer; }
+    .seat--enabled:hover {
+      background-color: #fafafa; }
+  .seat--selected {
+    cursor: pointer;
+    background-color: #92d771; }
+  .seat--reserved {
+    cursor: not-allowed;
+    background-color: #49963c; }
