@@ -51,7 +51,7 @@ export async function getPHD1Summary() {
 }
 
 export async function getDesks(){
-  const url = `${baseURL}/desks`;
+  const url = `${baseServiceURl}/services/hackoholics/desks`;
 
   return await Axios.get(url)
   .then(response => {

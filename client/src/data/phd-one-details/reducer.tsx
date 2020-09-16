@@ -18,7 +18,7 @@ const phdOneDetails = (
 };
 
 const groupedDesks = (
-  state: any[],
+  state: any[] = [],
   action: IReduxAction
 ) => {
   switch (action.type) {
