@@ -544,6 +544,204 @@
 				}
 			],
 			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Bookings",
+			"item": [
+				{
+					"name": "GetBookings_Empty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostBooking1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deskuid\": \"b002f009d008\",\r\n    \"uid\": \"booking001\",\r\n    \"useruid\": \"useruid2\",\r\n    \"startDateTime\": 1600250400000,\r\n    \"endDateTime\": 1600279200000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostBooking2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deskuid\": \"b002f009d001\",\r\n    \"uid\": \"booking002\",\r\n    \"useruid\": \"useruid1\",\r\n    \"startDateTime\": 1600423200000,\r\n    \"endDateTime\": 1600452000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostBooking3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deskuid\": \"b002f009d001\",\r\n    \"uid\": \"booking003\",\r\n    \"useruid\": \"useruid1\",\r\n    \"startDateTime\": 1600250400000,\r\n    \"endDateTime\": 1600279200000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBooking",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings/booking001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings",
+								"booking001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetBookingsByDateTime",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/bookings?starttime=1600423200000&endtime=1600452000000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"bookings"
+							],
+							"query": [
+								{
+									"key": "starttime",
+									"value": "1600423200000"
+								},
+								{
+									"key": "endtime",
+									"value": "1600452000000"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
 		}
 	],
 	"protocolProfileBehavior": {}
