@@ -84,7 +84,11 @@ export class PHDOneDetails extends React.PureComponent<
             >
               <input type="text" className="form-control col-4 user-page__date-picker" />
             </DateRangePicker>
-            <Form.Button className="find-button">Find</Form.Button>
+            <Form.Button
+              className="find-button"
+              onClick={this.props.fetchDesks}
+            >Find
+            </Form.Button>
           </Form.Group>
         </Form>
         <div className='layout'>

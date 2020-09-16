@@ -17,6 +17,21 @@ const phdOneDetails = (
   }
 };
 
+const groupedDesks = (
+  state: any[],
+  action: IReduxAction
+) => {
+  switch (action.type) {
+    case actions.FETCH_DESKS_SUCCEEDED:
+      return action.payload;
+    case actions.FETCH_DESKS_FAILED:
+      return {};
+    default:
+      return state;
+  }
+};
+
 export const reducer = combineReducers({
-  phdOneDetails
+  phdOneDetails,
+  groupedDesks
 });

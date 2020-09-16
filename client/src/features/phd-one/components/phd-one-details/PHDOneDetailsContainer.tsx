@@ -11,7 +11,8 @@ const mapStateToProps = (state: object): IPHDOneDetailsDataProps => ({
 
 const mapDispatchToProps: IPHDOneDetailsDispatchProps = {
     fetchPHDOneDetails: data.phdOneDetails.actions.fetchPHDOneDetailsStarted,
-    onNavigate: navigate
+    onNavigate: navigate,
+    fetchDesks: data.phdOneDetails.actions.fetchDesksStarted
 };
 
 export const PHDOneDetailsContainer = connect<
