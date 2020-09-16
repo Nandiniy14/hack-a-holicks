@@ -6,12 +6,13 @@ import { Dropdown, Form } from "semantic-ui-react";
 import DateRangePicker from "react-bootstrap-daterangepicker";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-daterangepicker/daterangepicker.css";
+import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
 
 export class PHDOneDetails extends React.PureComponent<
   IPHDOneDetailsProps,
   {}
-> {
-  public render() {
+  > {
+  render() {
     const countryOptions = [
       { key: "af", value: "af", flag: "af", text: "Afghanistan" },
       { key: "ax", value: "ax", flag: "ax", text: "Aland Islands" },
@@ -75,18 +76,19 @@ export class PHDOneDetails extends React.PureComponent<
               clearable
               defaultValue={false}
             />
-              <DateRangePicker
-                initialSettings={{
-                  startDate: "01/01/2020",
-                  endDate: "01/15/2020",
-                }}
-              >
-                <input type="text" className="form-control col-4 user-page__date-picker" />
-              </DateRangePicker>
+            <DateRangePicker
+              initialSettings={{
+                startDate: "01/01/2020",
+                endDate: "01/15/2020",
+              }}
+            >
+              <input type="text" className="form-control col-4 user-page__date-picker" />
+            </DateRangePicker>
             <Form.Button className="find-button">Find</Form.Button>
           </Form.Group>
         </Form>
-        <div className="container ">
+        <div className='layout'>
+          <SeatLayout />
         </div>
       </div>
     );

@@ -1,11 +1,15 @@
 export const ROUTES = {
     '/': {
         path: '/',
-        title: 'default'
+        title: 'Seat layout'
     },
     '/home': {
         path: '/home',
         title: 'Home'
+    },
+    '/user/login': {
+        path: '/user/login',
+        title: 'User Login'
     },
     '/phd/v1': {
         path: '/phd/v1',
