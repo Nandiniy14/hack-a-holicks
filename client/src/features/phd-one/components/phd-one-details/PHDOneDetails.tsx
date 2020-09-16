@@ -90,7 +90,7 @@ export class userMainPage extends React.PureComponent<
           </Form.Group>
         </Form>
         <div className='layout'>
-          <SeatLayout />
+          <SeatLayout seats={[]} />
         </div>
       </div>
     );

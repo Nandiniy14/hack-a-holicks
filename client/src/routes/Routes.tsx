@@ -27,7 +27,7 @@ export const Routes: React.FunctionComponent = () => {
 }
 
 const defaultPage = () => {
-    return <SeatLayout />;
+    return <OverviewBackGroundContainer />;
 };
 
 function getComponentForPath(path: string) {
@@ -36,7 +36,6 @@ function getComponentForPath(path: string) {
         '/phd/v1': PHDOneDetailsContainer,
         '/phd/v2': PHDTwoDetails,
         '/user/login': UserLoginDetailsContainer,
-        '/': SeatLayout
     };
 
     if (knownPageComponents[path]) {
