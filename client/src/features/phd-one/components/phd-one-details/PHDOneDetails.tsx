@@ -96,7 +96,9 @@ export class userMainPage extends React.PureComponent<
         <div className='layout'>
           <SeatLayout deskGroups={[[]]} onSeatSelection={this.onSeatSelection} selectedSeatID={this.state.selectedSeatID} />
         </div>
+       
         <Form.Button className="submit-button" type='submit' style={{float:"right",backgroundColor:"#3c8195"}} onClick={this.onBookingClick} disabled={isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
+       
       </div>
     );
   }
