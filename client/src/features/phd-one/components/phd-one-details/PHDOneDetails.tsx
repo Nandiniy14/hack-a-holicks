@@ -9,6 +9,7 @@ import "bootstrap-daterangepicker/daterangepicker.css";
 import { get } from "lodash";
 import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
+import moment from "moment";
 
 export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
@@ -19,7 +20,9 @@ export class userMainPage extends React.PureComponent<
     floorsList: [],
     location: "",
     selectedBuilding: string,
-    selectedFloor: string
+    selectedFloor: string,
+    startDate: moment(),
+    endDate: moment()
   };
 
   public componentDidMount() {
@@ -79,10 +82,11 @@ export class userMainPage extends React.PureComponent<
                 startDate: "01/01/2020",
                 endDate: "01/15/2020",
               }}
+              onApply={this.onDateSelection}
             >
               <input type="text" className="form-control col-4 user-page__date-picker" />
             </DateRangePicker>
-            <Form.Button className="find-button">Find</Form.Button>
+            <Form.Button className="find-button" onClick={this.getTheLayoutdata}>Find</Form.Button>
           </Form.Group>
         </Form>
         <div className='layout'>
@@ -137,7 +141,16 @@ export class userMainPage extends React.PureComponent<
         this.props.fetchLayoutData({
           location: this.state.location,
           building: this.state.selectedBuilding,
-          floor: this.state.selectedFloor
+          floor: this.state.selectedFloor,
+          startDate: this.state.startDate,
+          endDate: this.state.endDate
         });
     };
+
+    private onDateSelection = (event: any, picker: any) => {
+      this.setState({
+        startDate: picker.startDate,
+        endDate: picker.endDate
+      })
+    }
 }
