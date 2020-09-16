@@ -1,5 +1,5 @@
 import Axios from "axios";
-import { baseURL } from "../constants";
+import { baseServiceURl, baseURL } from "../constants";
 import { async } from "q";
 
 export async function getPHD1Winners() {
@@ -23,6 +23,18 @@ export async function getPHD1Runners() {
     })
     .catch(() => {
       console.log("Error occured while fetching the PHD runners details");
+    });
+}
+
+export async function getLocationDetails() {
+  const url = `${baseServiceURl}/services/hackoholics/locations`;
+
+  return await Axios.get(url)
+    .then(response => {
+      return response.data;
+    })
+    .catch(() => {
+      console.log("Error occured while fetching locations");
     });
 }
 
