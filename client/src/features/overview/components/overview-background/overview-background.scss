@@ -2,15 +2,27 @@
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: #e0e0e0;
+  background-color: white;
 
   .main-head {
-    .react-image {
-      height: 6rem;
-      width: 7rem;
-      position: relative;
-      padding: 2rem;
-    }
+   
+      height: 10rem ;
+      color: white;
+      font-weight: bolder;
+     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.05)),url(../../../../static/images/deskbackground.jpg);
+  }
+  .main-head1{
+    padding-top:1%;
+    padding-bottom:1%;
+    padding-left:2%;
+    background-color: white;
+    text-align: left;
+  }
+  .para_text { 
+    word-spacing: 0.5rem;
+    text-align: right;
+    font-size: 1.5rem;
+    padding-right:5%;
   }
 
   .sub-head {
