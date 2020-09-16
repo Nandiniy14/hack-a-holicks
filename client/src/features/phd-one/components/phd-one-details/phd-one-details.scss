@@ -1,0 +1,42 @@
+.phd-one-details {
+  position: relative;
+  .container {
+    margin-top: 4rem;
+
+    &__left {
+      display: flex;
+      flex-flow: wrap;
+    }
+    
+    &__right {
+      display: flex;
+    }
+  }
+}
+
+.user-page{
+  &__form {
+    height: 9rem;
+    background-color: red;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  &__date-picker{
+    height: 2.75rem !important;
+  }
+  &__text{
+    font-size: 1.75rem;
+    padding-top: 1rem;
+    font-family: math;
+    color: white;
+  }
+}
+
+.location-dropdown {
+  width: 20% !important;
+  font-size: 1rem;
+}
+
+.find-button {
+  width: 5% !important;
+}
