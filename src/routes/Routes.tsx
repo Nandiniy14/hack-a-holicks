@@ -4,6 +4,7 @@ import { Redirect, Route } from 'react-router';
 import { OverviewBackGroundContainer } from '../features/overview/components/overview-background/OverviewBackgroundContainer';
 import { PHDOneDetailsContainer } from '../features/phd-one/components/phd-one-details/PHDOneDetailsContainer';
 import { PHDTwoDetails } from '../features/phd-two/components/phd-two-details/PHDTwoDetails';
+import { SeatLayout } from '../features/seat-layout/components/SeatLayout';
 import { IDictionary } from '../types/IDictionary';
 import { IPageRoute } from '../types/IPageRoute';
 import * as constants from './constants';
@@ -25,14 +26,15 @@ export const Routes: React.FunctionComponent = () => {
 }
 
 const defaultPage = () => {
-    return <Redirect to='/home' />;
+    return <SeatLayout />;
 };
 
 function getComponentForPath(path: string) {
     const knownPageComponents: IDictionary<any> = {
         '/home': OverviewBackGroundContainer,
         '/phd/v1': PHDOneDetailsContainer,
-        '/phd/v2': PHDTwoDetails
+        '/phd/v2': PHDTwoDetails,
+        '/': SeatLayout
     };
 
     if (knownPageComponents[path]) {

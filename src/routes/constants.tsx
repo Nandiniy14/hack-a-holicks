@@ -1,7 +1,7 @@
 export const ROUTES = {
     '/': {
         path: '/',
-        title: 'default'
+        title: 'Seat layout'
     },
     '/home': {
         path: '/home',
