@@ -2,6 +2,7 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import express, { ErrorRequestHandler, Express, NextFunction, Request, Response } from 'express';
 import { Server } from 'http';
+import { bookingAPI } from '../api/bookingAPI';
 import { deskAPI } from '../api/deskAPI';
 import { pingAPI } from '../api/pingAPI';
 import { userAPI } from '../api/userAPI';
@@ -53,6 +54,7 @@ export const start = (configuration: IConfiguration) => {
     userAPI(app, configuration);
     workspaceAPI(app, configuration);
     deskAPI(app, configuration);
+    bookingAPI(app, configuration);
 
     console.info('server started!');
     const server = app.listen(configuration.server_port, () => resolve(server));

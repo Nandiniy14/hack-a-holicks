@@ -1,26 +1,26 @@
-{
-    "b002f009d001": [
-        {
-            "empID": "2900",
-            "startDateTime": "2020-09-13T10:00:00.000Z",
-            "endDateTime": "2020-09-13T18:00:00.000Z"
-        },
-        {
-            "userUid": "2901",
-            "startDateTime": "2020-09-16T10:00:00.000Z",
-            "endDateTime": "2020-09-20T18:00:00.000Z"
-        }
-    ],
-    "b002f009d002": [
-        {
-            "userUid": "2902",
-            "startDateTime": "2020-09-13T10:00:00.000Z",
-            "endDateTime": "2020-09-13T18:00:00.000Z"
-        },
-        {
-            "userUid": "2903",
-            "startDateTime": "2020-09-13T10:00:00.000Z",
-            "endDateTime": "2020-09-13T18:00:00.000Z"
-        }
-    ]
-}
+[
+    {
+        "_id": "5f61b891fbc8604f9cd5ce95",
+        "deskuid": "b002f009d008",
+        "uid": "booking001",
+        "useruid": "useruid2",
+        "startDateTime": 1600250400000,
+		"endDateTime": 1600279200000
+    },
+    {
+        "_id": "5f61b89bfbc8604f9cd5ce96",
+        "deskuid": "b002f009d001",
+        "uid": "booking002",
+        "useruid": "useruid1",
+        "startDateTime": 1600423200000,
+		"endDateTime": 1600452000000
+    },
+    {
+        "_id": "5f61b8ecfbc8604f9cd5ce97",
+        "deskuid": "b002f009d001",
+        "uid": "booking003",
+        "useruid": "useruid1",
+        "startDateTime": 1600250400000,
+        "endDateTime": 1600279200000
+    }
+]

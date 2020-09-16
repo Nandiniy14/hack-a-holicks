@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-daterangepicker/daterangepicker.css";
 import { get } from "lodash";
 import { string } from "prop-types";
+import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
 
 export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
@@ -79,15 +80,14 @@ export class userMainPage extends React.PureComponent<
                 endDate: "01/15/2020",
               }}
             >
-              <input
-                type="text"
-                className="form-control col-4 user-page__date-picker"
-              />
+              <input type="text" className="form-control col-4 user-page__date-picker" />
             </DateRangePicker>
-            <Form.Button className="find-button" onClick={this.getTheLayoutdata}>Find</Form.Button>
+            <Form.Button className="find-button">Find</Form.Button>
           </Form.Group>
         </Form>
-        <div className="container "></div>
+        <div className='layout'>
+          <SeatLayout />
+        </div>
       </div>
     );
   }
