@@ -1,15 +1,14 @@
 import _ from 'lodash';
 import * as React from 'react';
-import { Redirect, Route } from 'react-router';
+import { Route } from 'react-router';
 import { OverviewBackGroundContainer } from '../features/overview/components/overview-background/OverviewBackgroundContainer';
 import { PHDOneDetailsContainer } from '../features/phd-one/components/phd-one-details/PHDOneDetailsContainer';
 import { PHDTwoDetails } from '../features/phd-two/components/phd-two-details/PHDTwoDetails';
-import { SeatLayout } from '../features/seat-layout/components/SeatLayout';
+import { UserLoginDetailsContainer } from '../features/user-login/components/user-login-details/UserLoginDetailsContainer';
 import { IDictionary } from '../types/IDictionary';
 import { IPageRoute } from '../types/IPageRoute';
 import * as constants from './constants';
 import { NotFoundPage } from './NotFound';
-import { UserLoginDetailsContainer } from '../features/user-login/components/user-login-details/UserLoginDetailsContainer';
 
 const routes = constants.ROUTES;
 

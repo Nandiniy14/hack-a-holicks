@@ -11,6 +11,7 @@ const mapStateToProps = (state: object): IPHDOneDetailsDataProps => ({
 });
 
 const mapDispatchToProps: IPHDOneDetailsDispatchProps = {
+    bookTheSeat: data.phdOneDetails.actions.bookTheSeatStarted,
     fetchPHDOneDetails: data.phdOneDetails.actions.fetchPHDOneDetailsStarted,
     fetchLocationDetails: data.phdOneDetails.actions.fetchLocationDetailsStarted,
     fetchLayoutData: data.phdOneDetails.actions.fetchLayoutDataStarted,
