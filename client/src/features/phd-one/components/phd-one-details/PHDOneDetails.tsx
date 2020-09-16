@@ -9,6 +9,8 @@ import "bootstrap-daterangepicker/daterangepicker.css";
 import { get, isEmpty } from "lodash";
 import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
+import hexdesklogo from '../../../../static/images/hexdesk.png';
+import { Button } from "react-bootstrap";
 import moment from "moment";
 
 export class userMainPage extends React.PureComponent<
@@ -33,6 +35,10 @@ export class userMainPage extends React.PureComponent<
   public render() {
     return (
       <div className="phd-one-details">
+         <span  className="main-head1">
+                <img className="react-image" src={hexdesklogo} style={{float:"left",paddingLeft:"2%"}} />
+                <p className="para_text">Support About Us</p>
+          </span>
         <Form className="user-page__form">
           <p className="user-page__text">
             {" "}
@@ -90,7 +96,9 @@ export class userMainPage extends React.PureComponent<
         <div className='layout'>
           <SeatLayout deskGroups={this.props.groupedDesks} onSeatSelection={this.onSeatSelection} selectedSeatID={this.state.selectedSeatID} />
         </div>
-        <Form.Button className="submit-button" type='submit' onClick={this.onBookingClick} disabled={isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
+       
+        <Form.Button className="submit-button" type='submit' style={{float:"right",backgroundColor:"#3c8195"}} onClick={this.onBookingClick} disabled={isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
+       
       </div>
     );
   }
