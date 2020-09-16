@@ -49,3 +49,15 @@ export async function getPHD1Summary() {
       console.log("Error occured while fetching the PHD details");
     });
 }
+
+export async function getDesks(){
+  const url = `${baseServiceURl}/services/hackoholics/desks`;
+
+  return await Axios.get(url)
+  .then(response => {
+    return response.data;
+  })
+  .catch(()=>{
+    console.log('Error occured while fetching desks data');
+  });
+}
