@@ -1,4 +1,4 @@
-import { times } from 'lodash';
+import { ceil, round, times } from 'lodash';
 import React from 'react';
 import { ISeatDetails } from "../../../features/seat-layout/components/types/ISeatDetails";
 import { DeskWidth } from "../constant";
@@ -9,14 +9,10 @@ export const Desk: React.FunctionComponent<IDeskProps> = (props: IDeskProps) => 
     const deskLength = props.seats.length * 100;
     const distanceBetweenSeats = deskLength / (props.seats.length * 2);
 
-    // const getSeatLeft = (isFirstSeat: boolean, seatSequence: number) => {
-    //     return isFirstSeat ? distanceBetweenSeats * seatSequence : distanceBetweenSeats * seatSequence * 2
-    // };
-
     return (
         <div className='desk-layout'>
             <div className='desk-layout__seats'>
-                {times(3, (index: number) => (
+                {times(round(props.seats.length / 2), (index: number) => (
                     props.seats[index] && <Seat
                         isEnabled={true}
                         isReserved={false}
@@ -33,7 +29,7 @@ export const Desk: React.FunctionComponent<IDeskProps> = (props: IDeskProps) => 
                 <div className="desk-layout__desk__separator" />
             </div>
             <div className='desk-layout__seats'>
-                {times(3, (index: number) => (
+                {times(ceil(props.seats.length - round(props.seats.length / 2)), (index: number) => (
                     props.seats[index + 3] && <Seat
                         isEnabled={true}
                         isReserved={false}
