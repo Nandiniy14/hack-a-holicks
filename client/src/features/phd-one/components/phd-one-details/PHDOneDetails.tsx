@@ -91,9 +91,9 @@ export class userMainPage extends React.PureComponent<
           </Form.Group>
         </Form>
         <div className='layout'>
-          <SeatLayout seats={[]} onSeatSelection={this.onSeatSelection} />
+          <SeatLayout deskGroups={[[]]} onSeatSelection={this.onSeatSelection} selectedSeatID={this.state.selectedSeatID} />
         </div>
-        <Form.Button className="find-button" onClick={this.onBookingClick} disabled={!isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
+        <Form.Button className="submit-button" type='submit' onClick={this.onBookingClick} disabled={isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
       </div>
     );
   }
@@ -140,31 +140,31 @@ export class userMainPage extends React.PureComponent<
     })
   }
 
-    /**
-     * Function to fetch the layout Data
-     */
-    private getTheLayoutdata = () => {
-        this.props.fetchLayoutData({
-          location: this.state.location,
-          building: this.state.selectedBuilding,
-          floor: this.state.selectedFloor,
-          startDate: this.state.startDate,
-          endDate: this.state.endDate
-        });
-    };
+  /**
+   * Function to fetch the layout Data
+   */
+  private getTheLayoutdata = () => {
+    this.props.fetchLayoutData({
+      location: this.state.location,
+      building: this.state.selectedBuilding,
+      floor: this.state.selectedFloor,
+      startDate: this.state.startDate,
+      endDate: this.state.endDate
+    });
+  };
 
-    private onDateSelection = (event: any, picker: any) => {
-      this.setState({
-        startDate: picker.startDate,
-        endDate: picker.endDate
-      })
-    }
+  private onDateSelection = (event: any, picker: any) => {
+    this.setState({
+      startDate: picker.startDate,
+      endDate: picker.endDate
+    })
+  }
 
-    private onBookingClick = () => {
-        if (this.state.selectedSeatID) {
-            this.props.bookTheSeat(this.state.selectedSeatID, "01/01/2020", "01/02/2020")
-        } else {
-            alert('Please select a seat');
-        }
+  private onBookingClick = () => {
+    if (this.state.selectedSeatID) {
+      this.props.bookTheSeat(this.state.selectedSeatID, this.state.startDate.toString(), this.state.endDate.toString());
+    } else {
+      alert('Please select a seat');
     }
+  }
 }

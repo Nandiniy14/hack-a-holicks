@@ -2,11 +2,17 @@
   margin: 1.5rem;
   .layout {
     display: flex;
-    margin-top: 2rem;
+    flex-direction: column;
+    margin: 2rem 0;
     height: calc(100vh - 18rem);
     padding: 1rem;
     border: 2px solid grey;
     overflow: auto;
+
+    .desk-group {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -35,4 +41,8 @@
 
 .find-button {
   width: 5% !important;
+}
+
+.submit-button{
+  
 }
