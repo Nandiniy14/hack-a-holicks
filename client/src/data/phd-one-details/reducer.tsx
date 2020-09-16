@@ -17,6 +17,20 @@ const phdOneDetails = (
   }
 };
 
+const groupedDesks = (
+  state: any[] = [],
+  action: IReduxAction
+) => {
+  switch (action.type) {
+    case actions.FETCH_DESKS_SUCCEEDED:
+      return action.payload;
+    case actions.FETCH_DESKS_FAILED:
+      return {};
+      default:
+      return state;
+  }
+};
+
 const locationDetails = (state: any[] = [], action: IReduxAction) => {
   switch (action.type) {
     case actions.FETCH_LOCATION_DETAILS_SUCCEEDED:
@@ -30,5 +44,6 @@ const locationDetails = (state: any[] = [], action: IReduxAction) => {
 
 export const reducer = combineReducers({
   phdOneDetails,
+  groupedDesks,
   locationDetails
 });

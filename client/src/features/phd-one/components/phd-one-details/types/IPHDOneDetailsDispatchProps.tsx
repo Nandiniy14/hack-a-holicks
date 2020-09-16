@@ -1,4 +1,4 @@
-import { bookTheSeatStarted, fetchLayoutDataStarted, fetchLocationDetailsStarted, fetchPHDOneDetailsStarted } from "../../../../../data/phd-one-details/actions";
+import { bookTheSeatStarted, fetchLayoutDataStarted, fetchDesksStarted, fetchLocationDetailsStarted, fetchPHDOneDetailsStarted } from "../../../../../data/phd-one-details/actions";
 
 export interface IPHDOneDetailsDispatchProps {
     onNavigate: (path: string) => any;
