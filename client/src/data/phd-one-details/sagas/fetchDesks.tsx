@@ -12,6 +12,6 @@ export function* fetchDesks() {
         const groupedDesks = yield call(mapAndGroupDesks, desksData)
         yield put(actions.fetchDesksSucceeded(groupedDesks));
     } catch (ex) {
-        throw new Error("Error occured while fetching the PHD1 Details");
+        throw new Error("Error occured while fetching the desks");
     }
 }

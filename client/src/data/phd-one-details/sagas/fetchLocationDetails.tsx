@@ -11,7 +11,6 @@ export function* fetchLocationDetails() {
           data.text = data.name;
           data.value = data.name;
         });
-        console.log(locationsData)
         yield put(actions.fetchLocationDetailsSucceeded(locationsData));
     } catch(error){
         yield put(actions.fetchLocationDetailsFailed())

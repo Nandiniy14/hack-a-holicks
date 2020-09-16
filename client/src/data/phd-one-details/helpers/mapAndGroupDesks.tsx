@@ -16,7 +16,8 @@ export const mapAndGroupDesks = (desksData: any[]) => {
                 deskName: deskData.deskName,
                 flooruid: deskData.flooruid,
                 santized: deskData.santized,
-                deskGroupId: deskData.deskGroupId
+                deskGroupId: deskData.deskGroupId,
+                isReserved: deskData.deskName === "F09D196"
             });
         });
 

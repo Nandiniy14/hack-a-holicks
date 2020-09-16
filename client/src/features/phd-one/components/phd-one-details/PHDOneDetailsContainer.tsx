@@ -7,7 +7,8 @@ import * as data from '../../../../data';
 
 const mapStateToProps = (state: object): IPHDOneDetailsDataProps => ({
     eventData: data.phdOneDetails.selectors.getPHDOneDetails(state),
-    locationsData: data.phdOneDetails.selectors.getLocationDetails(state)
+    locationsData: data.phdOneDetails.selectors.getLocationDetails(state),
+    groupedDesks: data.phdOneDetails.selectors.getGroupedDesks(state),
 });
 
 const mapDispatchToProps: IPHDOneDetailsDispatchProps = {

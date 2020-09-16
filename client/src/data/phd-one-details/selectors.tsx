@@ -8,3 +8,6 @@ export const getPHDOneDetails = (state: object): IPHDDetails =>
 
 export const getLocationDetails = (state: object): any[] => 
     get(state, `${PACKAGE}.${NAME}.locationDetails`, []);
+
+export const getGroupedDesks = (state: object): any[] => 
+    get(state, `${PACKAGE}.${NAME}.groupedDesks`, []);

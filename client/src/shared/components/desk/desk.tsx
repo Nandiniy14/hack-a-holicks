@@ -12,7 +12,7 @@ export const Desk: React.FunctionComponent<IDeskProps> = (props: IDeskProps) => 
         let seatIDsToBeDisabled: string[] = [];
         seats.forEach((seat) => {
             if (seat.isReserved || seat.id === selectedSeatID) {
-                seatIDsToBeDisabled.push(seat.id);
+                seatIDsToBeDisabled.push(...seat.siblingUIDs);
                 seatIDsToBeDisabled = [...new Set(seatIDsToBeDisabled)];
             }
         });
@@ -34,13 +34,13 @@ export const Desk: React.FunctionComponent<IDeskProps> = (props: IDeskProps) => 
                 {times(round(props.seats.length / 2), (index: number) => (
                     props.seats[index] &&
                     <Seat
-                        isEnabled={!seatIDsToBeDisabled.includes(props.seats[index].id)}
-                        isReserved={false}
+                        isEnabled={!seatIDsToBeDisabled.includes(props.seats[index].uid)}
+                        isReserved={!!props.seats[index].isReserved}
                         seatNumber={props.seats[index].id}
                         orientation='north'
                         selectSeat={props.onSeatSelect}
                         seatID={props.seats[index].id}
-                        tooltip={props.seats[index].id}
+                        tooltip={props.seats[index].deskName}
                         isSelected={props.selectedSeatID === props.seats[index].id}
                     />))}
             </div>
@@ -50,13 +50,13 @@ export const Desk: React.FunctionComponent<IDeskProps> = (props: IDeskProps) => 
             <div className='desk-layout__seats'>
                 {times(ceil(props.seats.length - round(props.seats.length / 2)), (index: number) => (
                     props.seats[index + 3] && <Seat
-                        isEnabled={true}
-                        isReserved={false}
+                        isEnabled={!seatIDsToBeDisabled.includes(props.seats[index + 3].uid)}
+                        isReserved={!!props.seats[index + 3].isReserved}
                         seatNumber={props.seats[index + 3].id}
                         orientation='south'
                         selectSeat={props.onSeatSelect}
                         seatID={props.seats[index + 3].id}
-                        tooltip={props.seats[index + 3].id}
+                        tooltip={props.seats[index + 3].deskName}
                         isSelected={props.selectedSeatID === props.seats[index + 3].id}
                     />))}
             </div>
@@ -65,7 +65,7 @@ export const Desk: React.FunctionComponent<IDeskProps> = (props: IDeskProps) => 
 }
 
 interface IDeskProps {
-    seats: ISeatDetails[],
+    seats: ISeatDetails[];
     onSeatSelect: (seatID: string) => void;
     selectedSeatID: string;
 }
