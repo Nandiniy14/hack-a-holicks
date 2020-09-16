@@ -1,67 +1,97 @@
-{
-    "USA": [
-        {
-            "buildingName": "305-Huntsville",
-            "uid": "b001",
-            "floors": [
-                {
-                    "floorName": "floor 1",
-                    "uid": "b001f001"
-                },
-                {
-                    "floorName": "floor 2",
-                    "uid": "b001f002"
-                },
-                {
-                    "floorName": "floor 3",
-                    "uid": "b001f003"
-                }
-            ]
-        },
-        {
-            "location": "USA",
-            "buildingName": "US-Detroit",
-            "uid": "b003",
-            "floors": [
-                {
-                    "floorName": "floor 1",
-                    "uid": "b003f001"
-                }
-            ]
-        }
-    ],
-    "India": [
-        {
-            "location": "India",
-            "buildingName": "Divyasree-Hyderabad",
-            "uid": "b002",
-            "floors": [
-                {
-                    "floorName": "floor 9",
-                    "uid": "b002f009"
-                },
-                {
-                    "floorName": "floor 10",
-                    "uid": "b002f010"
-                },
-                {
-                    "floorName": "floor 11",
-                    "uid": "b002f011"
-                }
-            ]
-        }
-    ],
-    "Australia": [
-        {
-            "location": "Australia",
-            "buildingName": "AUS-Brisbane",
-            "uid": "b004",
-            "floors": [
-                {
-                    "floorName": "floor 3",
-                    "uid": "b004f003"
-                }
-            ]
-        }
-    ]
-}
+[
+    {
+        "_id": "5f61a6db5492712a305f8345",
+        "name": "India",
+        "uid": "l001",
+        "buildings": [
+            {
+                "name": "GeoSystems-Gurugram",
+                "uid": "b001",
+                "floors": [
+                    {
+                        "name": "Second Floor",
+                        "uid": "b001f001"
+                    },
+                    {
+                        "name": "Third Floor",
+                        "uid": "b001f002"
+                    }
+                ]
+            },
+            {
+                "name": "HCCI-Hyd",
+                "uid": "b002",
+                "floors": [
+                    {
+                        "name": "Ground Floor",
+                        "uid": "b002f000"
+                    },
+                    {
+                        "name": "Ninth Floor",
+                        "uid": "b002f009"
+                    },
+                    {
+                        "name": "Tenth Floor",
+                        "uid": "b002f010"
+                    },
+                    {
+                        "name": "Eleventh Floor",
+                        "uid": "b002f011"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "5f61a6e05492712a305f8346",
+        "name": "USA",
+        "uid": "l002",
+        "buildings": [
+            {
+                "name": "305",
+                "uid": "b003",
+                "floors": [
+                    {
+                        "name": "Ground Floor",
+                        "uid": "b003f000"
+                    },
+                    {
+                        "name": "First Floor",
+                        "uid": "b003f001"
+                    }
+                ]
+            },
+            {
+                "name": "Madison",
+                "uid": "b004",
+                "floors": [
+                    {
+                        "name": "Third Floor",
+                        "uid": "b004f003"
+                    },
+                    {
+                        "name": "Fourth Floor",
+                        "uid": "b004f004"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "_id": "5f61a6e35492712a305f8347",
+        "name": "Sweden",
+        "uid": "l003",
+        "buildings": [
+            {
+                "name": "Stockholm",
+                "uid": "b005",
+                "floors": [
+                    {
+                        "name": "Fifth Floor",
+                        "uid": "b005f005"
+                    }
+                ]
+            }
+        ]
+    }
+]

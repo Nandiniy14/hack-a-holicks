@@ -6,53 +6,47 @@ import { Dropdown, Form } from "semantic-ui-react";
 import DateRangePicker from "react-bootstrap-daterangepicker";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-daterangepicker/daterangepicker.css";
+import { get } from "lodash";
+import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
 
-export class PHDOneDetails extends React.PureComponent<
+export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
   {}
-  > {
-  render() {
-    const countryOptions = [
-      { key: "af", value: "af", flag: "af", text: "Afghanistan" },
-      { key: "ax", value: "ax", flag: "ax", text: "Aland Islands" },
-      { key: "al", value: "al", flag: "al", text: "Albania" },
-      { key: "dz", value: "dz", flag: "dz", text: "Algeria" },
-      { key: "as", value: "as", flag: "as", text: "American Samoa" },
-      { key: "ad", value: "ad", flag: "ad", text: "Andorra" },
-      { key: "ao", value: "ao", flag: "ao", text: "Angola" },
-      { key: "ai", value: "ai", flag: "ai", text: "Anguilla" },
-      { key: "ag", value: "ag", flag: "ag", text: "Antigua" },
-      { key: "ar", value: "ar", flag: "ar", text: "Argentina" },
-      { key: "am", value: "am", flag: "am", text: "Armenia" },
-      { key: "aw", value: "aw", flag: "aw", text: "Aruba" },
-      { key: "au", value: "au", flag: "au", text: "Australia" },
-      { key: "at", value: "at", flag: "at", text: "Austria" },
-      { key: "az", value: "az", flag: "az", text: "Azerbaijan" },
-      { key: "bs", value: "bs", flag: "bs", text: "Bahamas" },
-      { key: "bh", value: "bh", flag: "bh", text: "Bahrain" },
-      { key: "bd", value: "bd", flag: "bd", text: "Bangladesh" },
-      { key: "bb", value: "bb", flag: "bb", text: "Barbados" },
-      { key: "by", value: "by", flag: "by", text: "Belarus" },
-      { key: "be", value: "be", flag: "be", text: "Belgium" },
-      { key: "bz", value: "bz", flag: "bz", text: "Belize" },
-      { key: "bj", value: "bj", flag: "bj", text: "Benin" },
-    ];
+> {
+  public state = {
+    buildingsList: [],
+    floorsList: [],
+    location: "",
+    selectedBuilding: string,
+    selectedFloor: string
+  };
+
+  public componentDidMount() {
+    this.props.fetchLocationDetails();
+  }
+
+  public render() {
     return (
       <div className="phd-one-details">
         <Form className="user-page__form">
-          <p className="user-page__text"> <b>Smart Solution For Work Space Management</b></p>
-          <Form.Group >
+          <p className="user-page__text">
+            {" "}
+            <b>Smart Solution For Work Space Management</b>
+          </p>
+          <Form.Group>
             <Form.Dropdown
               className={"location-dropdown"}
               placeholder="Search for location"
               fluid
-              multiple
+              multiple={false}
               search
               selection
-              options={countryOptions}
+              options={this.props.locationsData}
               clearable
               defaultValue={false}
+              noResultsMessage={null}
+              onChange={this.handleChange}
             />
             <Form.Dropdown
               className={"location-dropdown"}
@@ -60,10 +54,12 @@ export class PHDOneDetails extends React.PureComponent<
               fluid
               search
               selection
-              multiple
-              options={countryOptions}
+              multiple={false}
+              options={this.state.buildingsList}
               clearable
               defaultValue={false}
+              noResultsMessage={null}
+              onChange={this.handleBuildingsListChange}
             />
             <Form.Dropdown
               className={"location-dropdown"}
@@ -71,10 +67,12 @@ export class PHDOneDetails extends React.PureComponent<
               fluid
               search
               selection
-              multiple
-              options={countryOptions}
+              multiple={false}
+              options={this.state.floorsList}
               clearable
               defaultValue={false}
+              noResultsMessage={null}
+              onChange={this.handleFloorChange}
             />
             <DateRangePicker
               initialSettings={{
@@ -94,12 +92,52 @@ export class PHDOneDetails extends React.PureComponent<
     );
   }
 
-  //   /**
-  //    * Function to fetch the event Data
-  //    */
-  //   private checkEventDataIfEmpty = () => {
-  //     if (isEmpty(this.props.eventData)) {
-  //       this.props.fetchPHDOneDetails();
-  //     }
-  //   };
+  private handleChange = (e: any, { value }: any) => {
+    this.setState({ location: value });
+    const locationData = this.props.locationsData.find(
+      (data: any) => data.name === value
+    );
+    if (locationData) {
+      locationData.buildings.forEach((item: any) => {
+        item.text = item.name;
+        item.value = item.name;
+      });
+      this.setState({
+        buildingsList: locationData.buildings,
+      });
+    }
+  };
+
+  private handleBuildingsListChange = (e: any, { value }: any) => {
+    this.setState({
+      selectedBuilding: value
+    })
+    const buildingsList = this.state.buildingsList.find(
+      (data: any) => data.name === value
+    );
+      get(buildingsList,'floors', []).forEach((item: any) => {
+        item.text = item.name;
+        item.value = item.name;
+      });
+      this.setState({
+        floorsList: get(buildingsList,'floors', []),
+      });
+  };
+
+  private handleFloorChange = (e: any, { value }: any) => {
+    this.setState({
+      selectedFloor: value
+    })
+  }
+
+    /**
+     * Function to fetch the layout Data
+     */
+    private getTheLayoutdata = () => {
+        this.props.fetchLayoutData({
+          location: this.state.location,
+          building: this.state.selectedBuilding,
+          floor: this.state.selectedFloor
+        });
+    };
 }
