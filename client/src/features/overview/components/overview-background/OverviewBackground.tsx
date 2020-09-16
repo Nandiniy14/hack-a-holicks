@@ -31,10 +31,10 @@ export const OverviewBackGround: React.FunctionComponent<IOverviewBackgroundProp
 
     return (
         <div className="overview-background">
-            <div  className="main-head1">
-                <img className="react-image" src={hexdesklogo} />
-                <p className="para_text">Support About Us</p>
-            </div>
+           <span  className="main-head1">
+                <img className="react-image" src={hexdesklogo} style={{float:"left",paddingLeft:"1%",paddingTop:"1%",paddingBottom:"1%"}} />
+                <p className="para_text" style={{paddingTop:"1%",paddingBottom:"1%"}} >Support About Us</p>
+          </span>
             <div className="main-head">
                 Welcome to Work Space Management
                 </div>

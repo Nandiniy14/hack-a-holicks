@@ -9,6 +9,8 @@ import "bootstrap-daterangepicker/daterangepicker.css";
 import { get } from "lodash";
 import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
+import hexdesklogo from '../../../../static/images/hexdesk.png';
+import { Button } from "react-bootstrap";
 
 export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
@@ -29,6 +31,10 @@ export class userMainPage extends React.PureComponent<
   public render() {
     return (
       <div className="phd-one-details">
+         <span  className="main-head1">
+                <img className="react-image" src={hexdesklogo} style={{float:"left",paddingLeft:"2%"}} />
+                <p className="para_text">Support About Us</p>
+          </span>
         <Form className="user-page__form">
           <p className="user-page__text">
             {" "}
@@ -87,6 +93,9 @@ export class userMainPage extends React.PureComponent<
         </Form>
         <div className='layout'>
           <SeatLayout />
+        </div>
+        <div className='button_style'>
+        <Button style={{float:"right",backgroundColor:"#3c8195"}}>Book Now</Button>
         </div>
       </div>
     );

@@ -3,19 +3,36 @@
   .layout {
     display: flex;
     margin: 2rem;
-    height: calc(100vh - 18rem);
+    height: calc(100vh - 22rem);
     padding: 1rem;
     border: 2px solid grey;
     overflow: auto;
   }
 }
-
+.main-head1{
+  padding-top:1%;
+  padding-bottom:1%;
+  padding-left:2%;
+  background-color: white;
+  height:6rem;
+  text-align: left;
+}
+.para_text { 
+  word-spacing: 0.5rem;
+  text-align: right;
+  font-size: 1.5rem;
+  padding-right:3.75rem;
+}
+.button_style{
+  padding-right:2rem ;
+}
 .user-page {
   &__form {
     height: 9rem;
     background-color: red;
     padding-left: 1rem;
     padding-right: 1rem;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.05)),url(../../../../static/images/deskbackground.jpg);
   }
   &__date-picker {
     height: 2.75rem !important;
