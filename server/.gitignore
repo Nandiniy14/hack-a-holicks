@@ -1,0 +1,9 @@
+/*/node_modules
+/node_modules
+/*/build
+/build
+/*/coverage
+/coverage
+
+# let all production environments manage their own environment configs
+/*/.env

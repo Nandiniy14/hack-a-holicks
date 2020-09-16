@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "f884e618-b823-45bb-b17d-1569e8c1f437",
+		"name": "HackOHolicks",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetUsers_Empty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostUser1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"user1\",\r\n    \"uid\": \"useruid1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostUser2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"user2\",\r\n    \"uid\": \"useruid2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/users/useruid1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"users",
+								"useruid1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetUsers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"users"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Workspace",
+			"item": [
+				{
+					"name": "GetLocations_Empty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostLocation1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"India\",\r\n    \"uid\": \"l001\",\r\n    \"buildings\":[\r\n        \r\n        {\r\n            \"name\": \"GeoSystems-Gurugram\",\r\n            \"uid\": \"b001\",\r\n            \"floors\": [\r\n                {\r\n                    \"name\": \"Second Floor\",\r\n                    \"uid\": \"b001f001\"\r\n                },\r\n                {\r\n                    \"name\": \"Third Floor\",\r\n                    \"uid\": \"b001f002\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"HCCI-Hyd\",\r\n            \"uid\": \"b002\",\r\n            \"floors\": [\r\n                {\r\n                    \"name\": \"Ground Floor\",\r\n                    \"uid\": \"b002f000\"\r\n                },\r\n                {\r\n                    \"name\": \"Ninth Floor\",\r\n                    \"uid\": \"b002f009\"\r\n                },\r\n                {\r\n                    \"name\": \"Tenth Floor\",\r\n                    \"uid\": \"b002f010\"\r\n                },\r\n                {\r\n                    \"name\": \"Eleventh Floor\",\r\n                    \"uid\": \"b002f011\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostLocation2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"USA\",\r\n    \"uid\": \"l002\",\r\n    \"buildings\": [\r\n        {\r\n            \"name\": \"305\",\r\n            \"uid\": \"b003\",\r\n            \"floors\": [\r\n                {\r\n                    \"name\": \"Ground Floor\",\r\n                    \"uid\": \"b003f000\"\r\n                },\r\n                {\r\n                    \"name\": \"First Floor\",\r\n                    \"uid\": \"b003f001\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"Madison\",\r\n            \"uid\": \"b004\",\r\n            \"floors\": [\r\n                {\r\n                    \"name\": \"Third Floor\",\r\n                    \"uid\": \"b004f003\"\r\n                },\r\n                {\r\n                    \"name\": \"Fourth Floor\",\r\n                    \"uid\": \"b004f004\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostLocation3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sweden\",\r\n    \"uid\": \"l003\",\r\n    \"buildings\":[\r\n        {\r\n            \"name\": \"Stockholm\",\r\n            \"uid\": \"b005\",\r\n            \"floors\": [\r\n                {\r\n                    \"name\": \"Fifth Floor\",\r\n                    \"uid\": \"b005f005\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations/l001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations",
+								"l001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocation1Buildings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations/l001/buildings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations",
+								"l001",
+								"buildings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetLocation2Building1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/locations/l002/buildings/b003",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"locations",
+								"l002",
+								"buildings",
+								"b003"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Desks",
+			"item": [
+				{
+					"name": "GetDesks_Empty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/desks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"desks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDesk1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deskName\": \"F09D186\",\r\n    \"uid\": \"b002f009d001\",\r\n    \"flooruid\": \"b002f009\",\r\n    \"coordinates\": {\r\n        \"clientx\": 123,\r\n        \"clienty\": 456\r\n    },\r\n    \"siblinguids\": [\r\n        \"b002f009d002\",\r\n        \"b002f009d009\"\r\n    ],\r\n    \"santized\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/desks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"desks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDesks9thFloor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"deskName\": \"F09D187\",\r\n        \"uid\": \"b002f009d002\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d001\",\r\n            \"b002f009d003\",\r\n            \"b002f009d010\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D188\",\r\n        \"uid\": \"b002f009d003\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d002\",\r\n            \"b002f009d004\",\r\n            \"b002f009d011\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D189\",\r\n        \"uid\": \"b002f009d004\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d003\",\r\n            \"b002f009d005\",\r\n            \"b002f009d012\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D190\",\r\n        \"uid\": \"b002f009d005\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d004\",\r\n            \"b002f009d006\",\r\n            \"b002f009d013\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D191\",\r\n        \"uid\": \"b002f009d006\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d005\",\r\n            \"b002f009d007\",\r\n            \"b002f009d014\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D192\",\r\n        \"uid\": \"b002f009d007\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d006\",\r\n            \"b002f009d008\",\r\n            \"b002f009d015\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D193\",\r\n        \"uid\": \"b002f009d008\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d007\",\r\n            \"b002f009d016\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D194\",\r\n        \"uid\": \"b002f009d009\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d001\",\r\n            \"b002f009d010\",\r\n            \"b002f009d017\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D195\",\r\n        \"uid\": \"b002f009d010\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d002\",\r\n            \"b002f009d009\",\r\n            \"b002f009d018\",\r\n            \"b002f009d011\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D196\",\r\n        \"uid\": \"b002f009d011\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d003\",\r\n            \"b002f009d010\",\r\n            \"b002f009d012\",\r\n            \"b002f009d019\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D197\",\r\n        \"uid\": \"b002f009d012\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d004\",\r\n            \"b002f009d013\",\r\n            \"b002f009d020\",\r\n            \"b002f009d011\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D198\",\r\n        \"uid\": \"b002f009d013\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d005\",\r\n            \"b002f009d012\",\r\n            \"b002f009d014\",\r\n            \"b002f009d021\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D199\",\r\n        \"uid\": \"b002f009d014\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d006\",\r\n            \"b002f009d013\",\r\n            \" b002f009d015\",\r\n            \"b002f009d022\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D200\",\r\n        \"uid\": \"b002f009d015\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d007\",\r\n            \"b002f009d014\",\r\n            \"b002f009d016\",\r\n            \"b002f009d023\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D201\",\r\n        \"uid\": \"b002f009d016\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d008\",\r\n            \"b002f009d015\",\r\n            \"b002f009d024\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D202\",\r\n        \"uid\": \"b002f009d017\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d009\",\r\n            \"b002f009d018\",\r\n            \"b002f009d025\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D203\",\r\n        \"uid\": \"b002f009d018\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d010\",\r\n            \"b002f009d017\",\r\n            \"b002f009d019\",\r\n            \"b002f009d026\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D204\",\r\n        \"uid\": \"b002f009d019\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d011\",\r\n            \"b002f009d018\",\r\n            \"b002f009d020\",\r\n            \"b002f009d027\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D205\",\r\n        \"uid\": \"b002f009d020\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d012\",\r\n            \"b002f009d019\",\r\n            \"b002f009d021\",\r\n            \"b002f009d028\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D206\",\r\n        \"uid\": \"b002f009d021\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d013\",\r\n            \"b002f009d020\",\r\n            \"b002f009d022\",\r\n            \"b002f009d029\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D207\",\r\n        \"uid\": \"b002f009d022\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d014\",\r\n            \"b002f009d021\",\r\n            \"b002f009d023\",\r\n            \"b002f009d030\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D208\",\r\n        \"uid\": \"b002f009d023\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d015\",\r\n            \"b002f009d022\",\r\n            \"b002f009d024\",\r\n            \"b002f009d031\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D209\",\r\n        \"uid\": \"b002f009d024\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d016\",\r\n            \"b002f009d023\",\r\n            \"b002f009d033\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D210\",\r\n        \"uid\": \"b002f009d025\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d017\",\r\n            \"b002f009d026\",\r\n            \"b002f009d034\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D211\",\r\n        \"uid\": \"b002f009d026\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d018\",\r\n            \"b002f009d025\",\r\n            \"b002f009d027\",\r\n            \"b002f009d035\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D212\",\r\n        \"uid\": \"b002f009d027\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d019\",\r\n            \"b002f009d026\",\r\n            \"b002f009d028\",\r\n            \"b002f009d036\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D213\",\r\n        \"uid\": \"b002f009d028\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d020\",\r\n            \"b002f009d027\",\r\n            \"b002f009d029\",\r\n            \"b002f009d037\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D214\",\r\n        \"uid\": \"b002f009d029\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d021\",\r\n            \"b002f009d028\",\r\n            \"b002f009d030\",\r\n            \"b002f009d038\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D215\",\r\n        \"uid\": \"b002f009d0030\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d022\",\r\n            \"b002f009d029\",\r\n            \"b002f009d031\",\r\n            \"b002f009d039\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D216\",\r\n        \"uid\": \"b002f009d031\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d023\",\r\n            \"b002f009d030\",\r\n            \"b002f009d032\",\r\n            \"b002f009d040\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D2217\",\r\n        \"uid\": \"b002f009d032\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d024\",\r\n            \"b002f009d031\",\r\n            \"b002f009d041\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D218\",\r\n        \"uid\": \"b002f009d033\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d025\",\r\n            \"b002f009d034\",\r\n            \"b002f009d042\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D219\",\r\n        \"uid\": \"b002f009d034\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d026\",\r\n            \"b002f009d033\",\r\n            \"b002f009d035\",\r\n            \"b002f009d043\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D220\",\r\n        \"uid\": \"b002f009d035\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d027\",\r\n            \"b002f009d034\",\r\n            \"b002f009d036\",\r\n            \"b002f009d044\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D221\",\r\n        \"uid\": \"b002f009d036\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d028\",\r\n            \"b002f009d035\",\r\n            \"b002f009d037\",\r\n            \"b002f009d045\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D222\",\r\n        \"uid\": \"b002f009d037\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d029\",\r\n            \"b002f009d036\",\r\n            \"b002f009d038\",\r\n            \"b002f009d046\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D223\",\r\n        \"uid\": \"b002f009d038\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d030\",\r\n            \"b002f009d037\",\r\n            \"b002f009d039\",\r\n            \"b002f009d047\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D224\",\r\n        \"uid\": \"b002f009d039\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d031\",\r\n            \"b002f009d038\",\r\n            \"b002f009d040\",\r\n            \"b002f009d048\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D225\",\r\n        \"uid\": \"b002f009d040\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d032\",\r\n            \"b002f009d039\",\r\n            \"b002f009d049\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D226\",\r\n        \"uid\": \"b002f009d041\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d033\",\r\n            \"b002f009d042\",\r\n            \"b002f009d050\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D227\",\r\n        \"uid\": \"b002f009d042\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d034\",\r\n            \"b002f009d041\",\r\n            \"b002f009d043\",\r\n            \"b002f009d051\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D228\",\r\n        \"uid\": \"b002f009d043\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d035\",\r\n            \"b002f009d042\",\r\n            \"b002f009d044\",\r\n            \"b002f009d052\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D229\",\r\n        \"uid\": \"b002f009d044\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d036\",\r\n            \"b002f009d043\",\r\n            \"b002f009d045\",\r\n            \"b002f009d053\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D230\",\r\n        \"uid\": \"b002f009d045\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d037\",\r\n            \"b002f009d044\",\r\n            \"b002f009d046\",\r\n            \"b002f009d054\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D231\",\r\n        \"uid\": \"b002f009d046\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d038\",\r\n            \"b002f009d045\",\r\n            \"b002f009d047\",\r\n            \"b002f009d055\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D232\",\r\n        \"uid\": \"b002f009d047\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d039\",\r\n            \"b002f009d046\",\r\n            \"b002f009d048\",\r\n            \"b002f009d056\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D233\",\r\n        \"uid\": \"b002f009d048\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d040\",\r\n            \"b002f009d047\",\r\n            \"b002f009d057\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D234\",\r\n        \"uid\": \"b002f009d049\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d041\",\r\n            \"b002f009d050\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D235\",\r\n        \"uid\": \"b002f009d050\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d042\",\r\n            \"b002f009d049\",\r\n            \"b002f009d051\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D236\",\r\n        \"uid\": \"b002f009d051\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d043\",\r\n            \"b002f009d050\",\r\n            \"b002f009d052\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D237\",\r\n        \"uid\": \"b002f009d052\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d044\",\r\n            \"b002f009d051\",\r\n            \"b002f009d053\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D238\",\r\n        \"uid\": \"b002f009d053\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d045\",\r\n            \"b002f009d052\",\r\n            \"b002f009d054\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D239\",\r\n        \"uid\": \"b002f009d054\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d046\",\r\n            \"b002f009d053\",\r\n            \"b002f009d055\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D240\",\r\n        \"uid\": \"b002f009d055\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d047\",\r\n            \"b002f009d054\",\r\n            \"b002f009d056\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F09D241\",\r\n        \"uid\": \"b002f009d056\",\r\n        \"flooruid\": \"b002f009\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f009d048\",\r\n            \"b002f009d055\"\r\n        ],\r\n        \"santized\": true\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/desks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"desks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PostDesks10thFloor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"deskName\": \"F10D186\",\r\n        \"uid\": \"b002f010d001\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d002\",\r\n            \"b002f010d009\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D187\",\r\n        \"uid\": \"b002f010d002\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d001\",\r\n            \"b002f010d003\",\r\n            \"b002f010d010\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D188\",\r\n        \"uid\": \"b002f010d003\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d002\",\r\n            \"b002f010d004\",\r\n            \"b002f010d011\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D189\",\r\n        \"uid\": \"b002f010d004\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d003\",\r\n            \"b002f010d005\",\r\n            \"b002f010d012\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D190\",\r\n        \"uid\": \"b002f010d005\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d004\",\r\n            \"b002f010d006\",\r\n            \"b002f010d013\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D191\",\r\n        \"uid\": \"b002f010d006\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d005\",\r\n            \"b002f010d007\",\r\n            \"b002f010d014\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D192\",\r\n        \"uid\": \"b002f010d007\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d006\",\r\n            \"b002f010d008\",\r\n            \"b002f010d015\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D193\",\r\n        \"uid\": \"b002f010d008\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d007\",\r\n            \"b002f010d016\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D194\",\r\n        \"uid\": \"b002f010d009\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d001\",\r\n            \"b002f010d010\",\r\n            \"b002f010d017\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D195\",\r\n        \"uid\": \"b002f010d010\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d002\",\r\n            \"b002f010d009\",\r\n            \"b002f010d018\",\r\n            \"b002f010d011\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D196\",\r\n        \"uid\": \"b002f010d011\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d003\",\r\n            \"b002f010d010\",\r\n            \"b002f010d012\",\r\n            \"b002f010d019\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D197\",\r\n        \"uid\": \"b002f010d012\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d004\",\r\n            \"b002f010d013\",\r\n            \"b002f010d020\",\r\n            \"b002f010d011\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D198\",\r\n        \"uid\": \"b002f010d013\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d005\",\r\n            \"b002f010d012\",\r\n            \"b002f010d014\",\r\n            \"b002f010d021\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D199\",\r\n        \"uid\": \"b002f010d014\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d006\",\r\n            \"b002f010d013\",\r\n            \" b002f010d015\",\r\n            \"b002f010d022\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D200\",\r\n        \"uid\": \"b002f010d015\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d007\",\r\n            \"b002f010d014\",\r\n            \"b002f010d016\",\r\n            \"b002f010d023\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D201\",\r\n        \"uid\": \"b002f010d016\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d008\",\r\n            \"b002f010d015\",\r\n            \"b002f010d024\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D202\",\r\n        \"uid\": \"b002f010d017\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d009\",\r\n            \"b002f010d018\",\r\n            \"b002f010d025\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D203\",\r\n        \"uid\": \"b002f010d018\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d010\",\r\n            \"b002f010d017\",\r\n            \"b002f010d019\",\r\n            \"b002f010d026\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D204\",\r\n        \"uid\": \"b002f010d019\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d011\",\r\n            \"b002f010d018\",\r\n            \"b002f010d020\",\r\n            \"b002f010d027\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D205\",\r\n        \"uid\": \"b002f010d020\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d012\",\r\n            \"b002f010d019\",\r\n            \"b002f010d021\",\r\n            \"b002f010d028\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D206\",\r\n        \"uid\": \"b002f010d021\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d013\",\r\n            \"b002f010d020\",\r\n            \"b002f010d022\",\r\n            \"b002f010d029\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D207\",\r\n        \"uid\": \"b002f010d022\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d014\",\r\n            \"b002f010d021\",\r\n            \"b002f010d023\",\r\n            \"b002f010d030\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D208\",\r\n        \"uid\": \"b002f010d023\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d015\",\r\n            \"b002f010d022\",\r\n            \"b002f010d024\",\r\n            \"b002f010d031\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D209\",\r\n        \"uid\": \"b002f010d024\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d016\",\r\n            \"b002f010d023\",\r\n            \"b002f010d033\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D210\",\r\n        \"uid\": \"b002f010d025\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d017\",\r\n            \"b002f010d026\",\r\n            \"b002f010d034\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D211\",\r\n        \"uid\": \"b002f010d026\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d018\",\r\n            \"b002f010d025\",\r\n            \"b002f010d027\",\r\n            \"b002f010d035\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D212\",\r\n        \"uid\": \"b002f010d027\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d019\",\r\n            \"b002f010d026\",\r\n            \"b002f010d028\",\r\n            \"b002f010d036\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D213\",\r\n        \"uid\": \"b002f010d028\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d020\",\r\n            \"b002f010d027\",\r\n            \"b002f010d029\",\r\n            \"b002f010d037\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D214\",\r\n        \"uid\": \"b002f010d029\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d021\",\r\n            \"b002f010d028\",\r\n            \"b002f010d030\",\r\n            \"b002f010d038\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D215\",\r\n        \"uid\": \"b002f010d0030\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d022\",\r\n            \"b002f010d029\",\r\n            \"b002f010d031\",\r\n            \"b002f010d039\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D216\",\r\n        \"uid\": \"b002f010d031\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d023\",\r\n            \"b002f010d030\",\r\n            \"b002f010d032\",\r\n            \"b002f010d040\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D2217\",\r\n        \"uid\": \"b002f010d032\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d024\",\r\n            \"b002f010d031\",\r\n            \"b002f010d041\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D218\",\r\n        \"uid\": \"b002f010d033\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d025\",\r\n            \"b002f010d034\",\r\n            \"b002f010d042\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D219\",\r\n        \"uid\": \"b002f010d034\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d026\",\r\n            \"b002f010d033\",\r\n            \"b002f010d035\",\r\n            \"b002f010d043\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D220\",\r\n        \"uid\": \"b002f010d035\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d027\",\r\n            \"b002f010d034\",\r\n            \"b002f010d036\",\r\n            \"b002f010d044\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D221\",\r\n        \"uid\": \"b002f010d036\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d028\",\r\n            \"b002f010d035\",\r\n            \"b002f010d037\",\r\n            \"b002f010d045\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D222\",\r\n        \"uid\": \"b002f010d037\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d029\",\r\n            \"b002f010d036\",\r\n            \"b002f010d038\",\r\n            \"b002f010d046\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D223\",\r\n        \"uid\": \"b002f010d038\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d030\",\r\n            \"b002f010d037\",\r\n            \"b002f010d039\",\r\n            \"b002f010d047\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D224\",\r\n        \"uid\": \"b002f010d039\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d031\",\r\n            \"b002f010d038\",\r\n            \"b002f010d040\",\r\n            \"b002f010d048\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D225\",\r\n        \"uid\": \"b002f010d040\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d032\",\r\n            \"b002f010d039\",\r\n            \"b002f010d049\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D226\",\r\n        \"uid\": \"b002f010d041\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d033\",\r\n            \"b002f010d042\",\r\n            \"b002f010d050\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D227\",\r\n        \"uid\": \"b002f010d042\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d034\",\r\n            \"b002f010d041\",\r\n            \"b002f010d043\",\r\n            \"b002f010d051\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D228\",\r\n        \"uid\": \"b002f010d043\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d035\",\r\n            \"b002f010d042\",\r\n            \"b002f010d044\",\r\n            \"b002f010d052\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D229\",\r\n        \"uid\": \"b002f010d044\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d036\",\r\n            \"b002f010d043\",\r\n            \"b002f010d045\",\r\n            \"b002f010d053\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D230\",\r\n        \"uid\": \"b002f010d045\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d037\",\r\n            \"b002f010d044\",\r\n            \"b002f010d046\",\r\n            \"b002f010d054\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D231\",\r\n        \"uid\": \"b002f010d046\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d038\",\r\n            \"b002f010d045\",\r\n            \"b002f010d047\",\r\n            \"b002f010d055\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D232\",\r\n        \"uid\": \"b002f010d047\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d039\",\r\n            \"b002f010d046\",\r\n            \"b002f010d048\",\r\n            \"b002f010d056\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D233\",\r\n        \"uid\": \"b002f010d048\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d040\",\r\n            \"b002f010d047\",\r\n            \"b002f010d057\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D234\",\r\n        \"uid\": \"b002f010d049\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d041\",\r\n            \"b002f010d050\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D235\",\r\n        \"uid\": \"b002f010d050\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d042\",\r\n            \"b002f010d049\",\r\n            \"b002f010d051\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D236\",\r\n        \"uid\": \"b002f010d051\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d043\",\r\n            \"b002f010d050\",\r\n            \"b002f010d052\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D237\",\r\n        \"uid\": \"b002f010d052\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d044\",\r\n            \"b002f010d051\",\r\n            \"b002f010d053\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D238\",\r\n        \"uid\": \"b002f010d053\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d045\",\r\n            \"b002f010d052\",\r\n            \"b002f010d054\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D239\",\r\n        \"uid\": \"b002f010d054\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d046\",\r\n            \"b002f010d053\",\r\n            \"b002f010d055\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D240\",\r\n        \"uid\": \"b002f010d055\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d047\",\r\n            \"b002f010d054\",\r\n            \"b002f010d056\"\r\n        ],\r\n        \"santized\": true\r\n    },\r\n    {\r\n        \"deskName\": \"F10D241\",\r\n        \"uid\": \"b002f010d056\",\r\n        \"flooruid\": \"b002f010\",\r\n        \"coordinates\": {\r\n            \"clientx\": 123,\r\n            \"clienty\": 456\r\n        },\r\n        \"siblinguids\": [\r\n            \"b002f010d048\",\r\n            \"b002f010d055\"\r\n        ],\r\n        \"santized\": true\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/desks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"desks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDesk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/desks/b002f009d001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"desks",
+								"b002f009d001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDesks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/desks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"desks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetDesksFrom9thFloor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/services/hackoholics/floor/b002f009/desks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"services",
+								"hackoholics",
+								"floor",
+								"b002f009",
+								"desks"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
