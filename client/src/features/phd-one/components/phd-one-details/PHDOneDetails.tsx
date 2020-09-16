@@ -6,20 +6,21 @@ import { Dropdown, Form } from "semantic-ui-react";
 import DateRangePicker from "react-bootstrap-daterangepicker";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-daterangepicker/daterangepicker.css";
-import { get } from "lodash";
+import { get, isEmpty } from "lodash";
 import { string } from "prop-types";
 import { SeatLayout } from "../../../seat-layout/components/SeatLayout";
 
 export class userMainPage extends React.PureComponent<
   IPHDOneDetailsProps,
   {}
-> {
+  > {
   public state = {
     buildingsList: [],
     floorsList: [],
     location: "",
-    selectedBuilding: string,
-    selectedFloor: string
+    selectedBuilding: '',
+    selectedFloor: '',
+    selectedSeatID: ''
   };
 
   public componentDidMount() {
@@ -86,10 +87,15 @@ export class userMainPage extends React.PureComponent<
           </Form.Group>
         </Form>
         <div className='layout'>
-          <SeatLayout seats={[]} />
+          <SeatLayout seats={[]} onSeatSelection={this.onSeatSelection} />
         </div>
+        <Form.Button className="find-button" onClick={this.onBookingClick} disabled={!isEmpty(this.state.selectedSeatID)}>Book</Form.Button>
       </div>
     );
+  }
+
+  private onSeatSelection = (selectedSeatID: string) => {
+    this.setState(() => { return { selectedSeatID } });
   }
 
   private handleChange = (e: any, { value }: any) => {
@@ -115,13 +121,13 @@ export class userMainPage extends React.PureComponent<
     const buildingsList = this.state.buildingsList.find(
       (data: any) => data.name === value
     );
-      get(buildingsList,'floors', []).forEach((item: any) => {
-        item.text = item.name;
-        item.value = item.name;
-      });
-      this.setState({
-        floorsList: get(buildingsList,'floors', []),
-      });
+    get(buildingsList, 'floors', []).forEach((item: any) => {
+      item.text = item.name;
+      item.value = item.name;
+    });
+    this.setState({
+      floorsList: get(buildingsList, 'floors', []),
+    });
   };
 
   private handleFloorChange = (e: any, { value }: any) => {
@@ -130,14 +136,22 @@ export class userMainPage extends React.PureComponent<
     })
   }
 
-    /**
-     * Function to fetch the layout Data
-     */
-    private getTheLayoutdata = () => {
-        this.props.fetchLayoutData({
-          location: this.state.location,
-          building: this.state.selectedBuilding,
-          floor: this.state.selectedFloor
-        });
-    };
+  /**
+   * Function to fetch the layout Data
+   */
+  private getTheLayoutdata = () => {
+    this.props.fetchLayoutData({
+      location: this.state.location,
+      building: this.state.selectedBuilding,
+      floor: this.state.selectedFloor
+    });
+  };
+
+  private onBookingClick = () => {
+    if (this.state.selectedSeatID) {
+      this.props.bookTheSeat(this.state.selectedSeatID, "01/01/2020", "01/02/2020")
+    } else {
+      alert('Please select a seat');
+    }
+  }
 }

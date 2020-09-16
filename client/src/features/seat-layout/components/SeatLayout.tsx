@@ -56,15 +56,13 @@ export class SeatLayout extends React.PureComponent<ISeatLayoutProps> {
                         <Desk seats={group[1]} onSeatSelect={() => { return }} selectedSeatID={'1'} />
                     </div>
                 ))}
-
-                <Desk seats={this.seats} onSeatSelect={() => { return }} selectedSeatID={'1'} />
-                <Desk seats={this.seats} onSeatSelect={() => { return }} selectedSeatID={'1'} />
             </>
         )
     }
 }
 
 interface ISeatLayoutProps {
-    seats: ISeatDetails[]
+    seats: ISeatDetails[],
+    onSeatSelection: (selectedSeatID: string) => void;
 }
 
