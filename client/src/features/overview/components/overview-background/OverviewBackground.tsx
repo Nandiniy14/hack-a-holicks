@@ -18,12 +18,11 @@ export const OverviewBackGround: React.FunctionComponent<IOverviewBackgroundProp
             default:
                 return <></>;
         }
-
     }
 
     const phdOneClick = (): void => {
         props.fetchPHDOneDetails();
-        props.onNavigate('/phd/v1');
+        props.onNavigate('/user/login');
     }
 
     const phdTwoClick = (): void => {

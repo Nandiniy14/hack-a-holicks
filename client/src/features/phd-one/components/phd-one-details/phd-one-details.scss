@@ -1,30 +1,26 @@
 .phd-one-details {
   position: relative;
-  .container {
-    margin-top: 4rem;
-
-    &__left {
-      display: flex;
-      flex-flow: wrap;
-    }
-    
-    &__right {
-      display: flex;
-    }
+  .layout {
+    display: flex;
+    margin: 2rem;
+    height: calc(100vh - 18rem);
+    padding: 1rem;
+    border: 2px solid grey;
+    overflow: auto;
   }
 }
 
-.user-page{
+.user-page {
   &__form {
     height: 9rem;
     background-color: red;
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  &__date-picker{
+  &__date-picker {
     height: 2.75rem !important;
   }
-  &__text{
+  &__text {
     font-size: 1.75rem;
     padding-top: 1rem;
     font-family: math;
